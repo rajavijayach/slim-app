@@ -1,11 +1,4 @@
-# Makes rewrite engine on
-RewriteEngine On 
-
-# When it doesn't get requested file, it redirects
+RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
-
-# When it doesn't get requested directory, it redirects
 RewriteCond %{REQUEST_FILENAME} !-d
-
-# It redirects to this page in the project directory
 RewriteRule ^ index.php [QSA,L]
